@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { SAMPLE_OKR, OKR_CATEGORY_OPTIONS } from '../constants/okr.constant';
+import { SAMPLE_OKR, OKR_CATEGORY_OPTIONS } from '../utils/constants/okr.constant';
 import OkrSegment from './OkrSegment';
 import NoData from './NoData'
 
-export default function Home() {
+export default function Container() {
 
     const [state, setState] = useState({ okrData: {} });
     const [category, setCategory] = useState('Company');
@@ -15,8 +15,6 @@ export default function Home() {
      */
     const constructJSON = (data = [], category = '') => {
         let cache = {};
-        // const misc = 'MISC000';
-        // cache[misc] = { title: 'Miscellanous', children: [] };
         data.forEach(item => {
             let id = item.id;
             let parentId = item.parent_objective_id;
@@ -25,7 +23,6 @@ export default function Home() {
                 (item.category === category) && (cache[id] = { title: title, children: [] });
             }
             else if (cache[parentId]) cache[parentId].children.push(item);
-            // else cache[misc].children.push(item);
         })
         setState({ okrData: cache });
     }
