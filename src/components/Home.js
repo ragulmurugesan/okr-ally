@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { SAMPLE_OKR } from '../constants/okr.constant';
-import OkrSegment from './okrSegment';
+import OkrSegment from './OkrSegment';
 
 export default class Home extends Component {
 
@@ -10,23 +10,23 @@ export default class Home extends Component {
     }
 
     componentDidMount() {
-        fetch(SAMPLE_OKR).then(res => res.json()).then(value => {
-            return this.constructJSON(value.data)
-        });
+        fetch(SAMPLE_OKR)
+            .then(res => res.json())
+            .then(value => this.constructJSON(value.data));
     }
 
     constructJSON(data) {
         let cache = {};
         const misc = 'MISC000';
         cache[misc] = { title: 'Miscellanous', children: [] };
-        for (let i = 0; i < data.length; i++) {
-            let id = data[i].id;
-            let parentId = data[i].parent_objective_id;
-            let title = data[i].title;
-            if (parentId === '') cache[id] = { title: title, children: [] };
-            else if (cache[parentId]) cache[parentId].children.push(data[i]);
-            else cache[misc].children.push(data[i]);
-        }
+        data.forEach(item => {
+            let id = item.id;
+            let parentId = item.parent_objective_id;
+            let title = item.title;
+            if (!parentId) cache[id] = { title: title, children: [] };
+            else if (cache[parentId]) cache[parentId].children.push(item);
+            else cache[misc].children.push(item);
+        })
         this.setState({ okrData: cache });
     }
 
@@ -35,10 +35,8 @@ export default class Home extends Component {
             <>
                 <h1 className="txt-center">Ally.io - OKR</h1>
                 <section className="ally-okr">
-                    {Object.keys(this.state.okrData).map(parentId => {
-                        return <OkrSegment title={this.state.okrData[parentId].title} nestChildren={this.state.okrData[parentId].children} />
-                    })}
-
+                    {Object.keys(this.state.okrData)
+                        .map(parentId => <OkrSegment key={parentId} title={this.state.okrData[parentId].title} nestChildren={this.state.okrData[parentId].children} />)}
                 </section>
             </>
         )
