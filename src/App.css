@@ -17,19 +17,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .ally-okr__segment-item {
   list-style: lower-alpha;
+  padding-left: 86px;
   padding-bottom: 30px;
   position: relative;
+  list-style-position: inside;
+  background: linear-gradient(#aeaeae, #aeaeae) 2px 13px/35px 2px no-repeat;
 }
 
 .ally-okr__segment>ul {
-  padding-left: 75px;
+  padding-left: 0px;
 }
 
 .ally-okr__segment-title {
+  padding-left: 30px;
   position: relative;
 }
 
@@ -42,7 +47,7 @@
   height: 30px;
   content: "";
   position: absolute;
-  left: -58px;
+  left: 50px;
   top: 3px;
 }
 
@@ -55,10 +60,14 @@
   height: 30px;
   content: "";
   position: absolute;
-  left: -38px;
+  left: -10px;
   top: 3px;
 }
 
 .ally-okr__segment {
-  background: linear-gradient(#000,#000) 0px calc(100% - 20px)/2px calc(100% - 40px)  no-repeat;
+  padding-left: 0;
+  background: linear-gradient(#aeaeae, #aeaeae) no-repeat;
+  background-position-y: 50px;
+  background-position-x: 0px;
+  background-size: 2px calc(100% - 102px);
 }
