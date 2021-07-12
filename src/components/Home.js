@@ -17,23 +17,17 @@ export default class Home extends Component {
 
     constructJSON(data) {
         let cache = {};
+        const misc = 'MISC000';
+        cache[misc] = { title: 'Miscellanous', children: [] };
         for (let i = 0; i < data.length; i++) {
             let id = data[i].id;
             let parentId = data[i].parent_objective_id;
             let title = data[i].title;
-            if (parentId === '') {
-                cache[id] = { title: title, children: [] };
-            }
-            else if (cache[parentId]) {
-                cache[parentId].children.push(data[i]);
-            } else {
-                console.log(id);
-                cache[parentId] = { title: title, children: [] };
-                cache[parentId].children.push(data[i]);
-            }
+            if (parentId === '') cache[id] = { title: title, children: [] };
+            else if (cache[parentId]) cache[parentId].children.push(data[i]);
+            else cache[misc].children.push(data[i]);
         }
         this.setState({ okrData: cache });
-        console.log('Main Obj', cache);
     }
 
     render() {
