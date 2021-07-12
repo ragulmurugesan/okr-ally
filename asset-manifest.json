@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/okr-ally/static/css/main.9d93e267.chunk.css",
+    "main.js": "/okr-ally/static/js/main.cba5766e.chunk.js",
+    "main.js.map": "/okr-ally/static/js/main.cba5766e.chunk.js.map",
+    "runtime-main.js": "/okr-ally/static/js/runtime-main.d574ada9.js",
+    "runtime-main.js.map": "/okr-ally/static/js/runtime-main.d574ada9.js.map",
+    "static/js/2.a50f6dd3.chunk.js": "/okr-ally/static/js/2.a50f6dd3.chunk.js",
+    "static/js/2.a50f6dd3.chunk.js.map": "/okr-ally/static/js/2.a50f6dd3.chunk.js.map",
+    "static/js/3.64d88e8a.chunk.js": "/okr-ally/static/js/3.64d88e8a.chunk.js",
+    "static/js/3.64d88e8a.chunk.js.map": "/okr-ally/static/js/3.64d88e8a.chunk.js.map",
+    "index.html": "/okr-ally/index.html",
+    "static/css/main.9d93e267.chunk.css.map": "/okr-ally/static/css/main.9d93e267.chunk.css.map",
+    "static/js/2.a50f6dd3.chunk.js.LICENSE.txt": "/okr-ally/static/js/2.a50f6dd3.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/okr-ally/static/media/user.55758720.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d574ada9.js",
+    "static/js/2.a50f6dd3.chunk.js",
+    "static/css/main.9d93e267.chunk.css",
+    "static/js/main.cba5766e.chunk.js"
+  ]
+}
