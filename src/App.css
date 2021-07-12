@@ -2,6 +2,15 @@
   box-sizing: border-box;
 }
 
+/* Home */
+
+.ally-okr {
+  padding: 24px;
+  display: flex;
+  margin-left: 20%;
+  flex-direction: column;
+}
+
 /* Helper class */
 
 .txt-center {
@@ -12,12 +21,7 @@
   position: relative;
 }
 
-.ally-okr {
-  padding: 24px;
-  display: flex;
-  margin-left: 20%;
-  flex-direction: column;
-}
+/* OKR Segment */
 
 .ally-okr__segment-item {
   list-style: lower-alpha;

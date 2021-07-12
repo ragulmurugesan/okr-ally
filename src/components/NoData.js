@@ -1,9 +1,8 @@
 import React from 'react'
 
+/**
+ * Component to render when no data to display. 
+ */
 export default function NoData() {
-    return (
-        <div className="no-data">
-            <h3 className="txt-center">Oops! No Data found!</h3>
-        </div>
-    )
+    return (<h3 className="txt-center">Oops! No Data found. Try some other category.</h3>)
 }
