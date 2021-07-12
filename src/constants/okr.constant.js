@@ -1,0 +1,1 @@
+export const SAMPLE_OKR = 'https://okrcentral.github.io/sample-okrs/db.json';
