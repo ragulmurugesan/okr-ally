@@ -1,38 +1,64 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+/* Helper class */
+
+.txt-center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pos-relative {
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.ally-okr {
+  padding: 24px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.ally-okr__segment-item {
+  list-style: lower-alpha;
+  padding-bottom: 30px;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ally-okr__segment>ul {
+  padding-left: 75px;
+}
+
+.ally-okr__segment-title {
+  position: relative;
+}
+
+.ally-okr__segment-item::before {
+  background-image: url('./assets/images/icons/user.png');
+  background-size: 20px 20px;
+  display: inline-block;
+  width: 30px;
+  background-repeat: no-repeat;
+  height: 30px;
+  content: "";
+  position: absolute;
+  left: -58px;
+  top: 3px;
+}
+
+.ally-okr__segment-title::before {
+  background-image: url('./assets/images/icons/user.png');
+  background-size: 20px 20px;
+  display: inline-block;
+  width: 30px;
+  background-repeat: no-repeat;
+  height: 30px;
+  content: "";
+  position: absolute;
+  left: -38px;
+  top: 3px;
+}
+
+.ally-okr__segment {
+  background: linear-gradient(#000,#000) 0px calc(100% - 20px)/2px calc(100% - 40px)  no-repeat;
 }
