@@ -70,3 +70,26 @@
   background-position-x: 0px;
   background-size: 2px calc(100% - 102px);
 }
+
+/* Accordion */
+
+.okr-accordion i {
+  background-size: 16px 16px;
+  display: inline-block;
+  width: 18px;
+  color: red;
+  height: 16px;
+  position: absolute;
+  background-repeat: no-repeat;
+  left: -40px;
+  top: 4px;
+  cursor: pointer;
+}
+
+.okr-accordion .accordion-up {
+  background-image: url('./assets/images/icons/up-arrow-angle.png');
+}
+
+.okr-accordion .accordion-down {
+  background-image: url('./assets/images/icons/down-arrow.png');
+}
