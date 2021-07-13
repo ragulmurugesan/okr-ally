@@ -1,14 +1,19 @@
 .okr-accordion i {
     background-size: 16px 16px;
     display: inline-block;
-    width: 18px;
-    color: red;
     height: 16px;
+    width: 16px;
     position: absolute;
     background-repeat: no-repeat;
     left: -40px;
     top: 4px;
+    opacity: 0.8;
     cursor: pointer;
+}
+
+.okr-accordion i:active {
+    outline: 2px solid #13ce95;
+    outline-offset: 6px;
 }
 
 .okr-accordion .accordion-up {

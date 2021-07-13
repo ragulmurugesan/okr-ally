@@ -1,16 +1,81 @@
 @import "./styles/accordion.css";
 @import "./styles/helpers.css";
+@import "./styles/media-queries.css";
 * {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+ul li {
+  font-size: 1rem;
+}
+
+body {
+  background: #F5FAFF;
+  color: #565656;
 }
 
 /* Container */
 
 .ally-okr {
-  padding: 24px;
+  padding: 12px 24px;
   display: flex;
   margin-left: 20%;
   flex-direction: column;
+}
+
+.app-okr {
+  padding: 20px;
+}
+
+.okr-cateogry-label {
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+/* Grid */
+
+/* .app-okr {
+  display: grid;
+  grid-template-areas: 'header header header header header header' 'subheader subheader subheader subheader subheader subheader' 'body body body body body body';
+  gap: 10px;
+  padding: 12px;
+} */
+
+.okr-cateogry-section {
+  grid-area: subheader;
+  margin-left: calc(20% + 24px);
+}
+
+.okr-cateogry-section select {
+  padding: 8px;
+}
+
+select {
+  border: 2px solid #13ce95;
+}
+
+select:focus-visible {
+  outline: 0;
+}
+
+.title-ally-okr {
+  grid-area: header;
+}
+
+.ally-okr {
+  grid-area: body;
 }
 
 /* OKR Segment */
@@ -35,7 +100,7 @@
 
 .ally-okr__segment-item::before {
   background-image: url('./assets/icons/user.png');
-  background-size: 20px 20px;
+  background-size: 24px 24px;
   display: inline-block;
   width: 30px;
   background-repeat: no-repeat;
@@ -43,12 +108,11 @@
   content: "";
   position: absolute;
   left: 50px;
-  top: 3px;
 }
 
 .ally-okr__segment-title::before {
   background-image: url('./assets/icons/user.png');
-  background-size: 20px 20px;
+  background-size: 24px 24px;
   display: inline-block;
   width: 30px;
   background-repeat: no-repeat;
@@ -66,3 +130,9 @@
   background-position-x: 0px;
   background-size: 2px calc(100% - 102px);
 }
+
+/* Reference */
+
+/* .app-okr>* {
+  border: 1px solid;
+} */

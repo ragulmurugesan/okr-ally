@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { SAMPLE_OKR, OKR_CATEGORY_OPTIONS } from '../utils/constants/okr.constant';
 import OkrSegment from './OkrSegment';
 import NoData from './NoData'
+import AppLogo from '../assets/icons/heading-logo.png'
 
 export default function Container() {
 
@@ -46,8 +47,9 @@ export default function Container() {
 
     return (
         <>
-            <h1 className="txt-center">Ally.io - OKR</h1>
-            <div className="txt-center">
+            <img className="ally-logo" src={AppLogo} alt="Ally logo" />
+            <div className="okr-cateogry-section">
+                <label className="okr-cateogry-label">Category</label>
                 <select value={category} onChange={handleCategoryChange}>
                     {OKR_CATEGORY_OPTIONS.map(option => <option key={option} value={option}>{option}</option>)}
                 </select>
