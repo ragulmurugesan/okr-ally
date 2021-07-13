@@ -17,15 +17,18 @@ You will also see any lint errors in the console.
 
 ## Assumptions
 
-The following assumtions have been made for the UI 
-
-font-color color - #565656
-primary color(green) - #3e3c3c 
-overall bg color - #F5FAFF
-
 The following assumtions have been made in the functionalities 
 
-Category 'Company' would be the initial state of the filter. 
-When there is no data to be displayed under an Objective, 'No data found' is to be shown. 
-When there is no data to be shown under a Category, 'Oops! No Data found. Try some other category.' is to be shown.
+#### `Category 'Company' would be the initial state of the filter.` 
+#### `When there is no data to be shown under a Category, 'Oops! No Data found. Try some other category.' is to be shown.`
+#### `When there is no data to be displayed under an Objective, 'No data found' is to be shown. `
+
+
+
+The following assumtions have been made for the UI 
+
+#### `font-color color - #565656`
+#### `primary color(green) - #3e3c3c` 
+#### `overall bg color - #F5FAFF`
+
 
