@@ -3,6 +3,7 @@ import { SAMPLE_OKR, OKR_CATEGORY_OPTIONS } from '../utils/constants/okr.constan
 import OkrSegment from './OkrSegment';
 import NoData from './NoData'
 import AppLogo from '../assets/icons/heading-logo.png'
+import ErrorBoundary from './ErrorBoundary';
 
 export default function Container() {
 
@@ -54,6 +55,7 @@ export default function Container() {
                     {OKR_CATEGORY_OPTIONS.map(option => <option key={option} value={option}>{option}</option>)}
                 </select>
             </div>
+            <ErrorBoundary>
             {
                 Object.keys(state.okrData).length > 0 ?
                     <>
@@ -65,6 +67,7 @@ export default function Container() {
                         </section>
                     </> : <NoData />
             }
+            </ErrorBoundary>
         </>
     )
 }
