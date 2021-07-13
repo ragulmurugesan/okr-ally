@@ -7,10 +7,6 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 16px;
-}
-
 h1 {
   font-size: 2rem;
 }
@@ -37,6 +33,10 @@ select:focus-visible {
 }
 
 /* Container */
+
+.ally-logo {
+  height: 2.5em;
+}
 
 .ally-okr {
   padding: 12px 24px;

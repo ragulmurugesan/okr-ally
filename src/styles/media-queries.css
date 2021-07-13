@@ -1,12 +1,55 @@
-@media only screen and (max-width: 600px) {
+/* Mobile */
+
+@media only screen and (max-width: 480px) {
     html {
-        font-size: 14px;
+        font-size: 10px;
+    }
+    .app-okr .ally-logo {
+        position: relative;
+        left: 40%;
+    }
+    .app-okr .okr-cateogry {
+        margin: 10px 0px;
+        text-align: center;
+    }
+    .app-okr .ally-okr {
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .ally-okr .ally-okr__segment-item {
+        padding-left: 4.4em;
+    }
+    .ally-okr .ally-okr__segment, .ally-okr .ally-okr__segment-item, .ally-okr .ally-okr__segment-item::before, .ally-okr .ally-okr__segment-title::before {
+        background: 0;
+    }
+    .okr-accordion i {
+        top: 0px;
+        left: 0px;
+    }
+    .app-okr .okr-cateogry select {
+        padding: 0;
     }
 }
 
-@media only screen and (min-width: 600px) {
-    .app-okr {
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 2px;
+/* Tablet */
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    .app-okr .ally-okr__segment {
+        background-position-y: 54px;
+    }
+    .app-okr .ally-logo {
+        position: absolute;
+    }
+}
+
+/* Laptop, Monitors */
+
+@media only screen and (min-width: 769) {
+    html {
+        font-size: 16px;
     }
 }
