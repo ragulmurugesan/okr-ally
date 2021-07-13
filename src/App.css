@@ -1,6 +1,8 @@
 @import "./styles/accordion.css";
 @import "./styles/helpers.css";
 @import "./styles/media-queries.css";
+/* Global */
+
 * {
   box-sizing: border-box;
 }
@@ -26,6 +28,14 @@ body {
   color: #565656;
 }
 
+select {
+  border: 2px solid #13ce95;
+}
+
+select:focus-visible {
+  outline: 0;
+}
+
 /* Container */
 
 .ally-okr {
@@ -39,43 +49,17 @@ body {
   padding: 20px;
 }
 
-.okr-cateogry-label {
+.okr-cateogry__label {
   font-weight: 500;
   margin-right: 8px;
 }
 
-/* Grid */
-
-/* .app-okr {
-  display: grid;
-  grid-template-areas: 'header header header header header header' 'subheader subheader subheader subheader subheader subheader' 'body body body body body body';
-  gap: 10px;
-  padding: 12px;
-} */
-
-.okr-cateogry-section {
-  grid-area: subheader;
+.okr-cateogry {
   margin-left: calc(20% + 24px);
 }
 
-.okr-cateogry-section select {
+.okr-cateogry select {
   padding: 8px;
-}
-
-select {
-  border: 2px solid #13ce95;
-}
-
-select:focus-visible {
-  outline: 0;
-}
-
-.title-ally-okr {
-  grid-area: header;
-}
-
-.ally-okr {
-  grid-area: body;
 }
 
 /* OKR Segment */
@@ -133,9 +117,3 @@ select:focus-visible {
   background-position-x: 0px;
   background-size: 2px calc(100% - 102px);
 }
-
-/* Reference */
-
-/* .app-okr>* {
-  border: 1px solid;
-} */

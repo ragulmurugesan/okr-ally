@@ -49,24 +49,24 @@ export default function Container() {
     return (
         <>
             <img className="ally-logo" src={AppLogo} alt="Ally logo" />
-            <div className="okr-cateogry-section">
-                <label className="okr-cateogry-label">Category</label>
+            <div className="okr-cateogry">
+                <label className="okr-cateogry__label">Category</label>
                 <select value={category} onChange={handleCategoryChange}>
                     {OKR_CATEGORY_OPTIONS.map(option => <option key={option} value={option}>{option}</option>)}
                 </select>
             </div>
             <ErrorBoundary>
-            {
-                Object.keys(state.okrData).length > 0 ?
-                    <>
-                        <section className="ally-okr">
-                            {
-                                Object.keys(state.okrData)
-                                    .map((parentId, index) => <OkrSegment key={parentId} count={index + 1} title={state.okrData[parentId].title} nestChildren={state.okrData[parentId].children} />)
-                            }
-                        </section>
-                    </> : <NoData />
-            }
+                {
+                    Object.keys(state.okrData).length > 0 ?
+                        <>
+                            <section className="ally-okr">
+                                {
+                                    Object.keys(state.okrData)
+                                        .map((parentId, index) => <OkrSegment key={parentId} count={index + 1} title={state.okrData[parentId].title} nestChildren={state.okrData[parentId].children} />)
+                                }
+                            </section>
+                        </> : <NoData />
+                }
             </ErrorBoundary>
         </>
     )
