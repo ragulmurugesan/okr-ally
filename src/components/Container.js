@@ -5,6 +5,10 @@ import NoData from './NoData'
 import AppLogo from '../assets/icons/heading-logo.png'
 import ErrorBoundary from './ErrorBoundary';
 
+/**
+ * Container component - Root level component 
+ * 
+ */
 export default function Container() {
 
     const [state, setState] = useState({ okrData: {} });
@@ -58,14 +62,12 @@ export default function Container() {
             <ErrorBoundary>
                 {
                     Object.keys(state.okrData).length > 0 ?
-                        <>
-                            <section className="ally-okr">
-                                {
-                                    Object.keys(state.okrData)
-                                        .map((parentId, index) => <OkrSegment key={parentId} count={index + 1} title={state.okrData[parentId].title} nestChildren={state.okrData[parentId].children} />)
-                                }
-                            </section>
-                        </> : <NoData />
+                        <section className="ally-okr">
+                            {
+                                Object.keys(state.okrData)
+                                    .map((parentId, index) => <OkrSegment key={parentId} count={index + 1} title={state.okrData[parentId].title} nestChildren={state.okrData[parentId].children} />)
+                            }
+                        </section> : <NoData />
                 }
             </ErrorBoundary>
         </>
