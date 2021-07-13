@@ -60,7 +60,7 @@ export default function Container() {
                         <section className="ally-okr">
                             {
                                 Object.keys(state.okrData)
-                                    .map(parentId => <OkrSegment key={parentId} title={state.okrData[parentId].title} nestChildren={state.okrData[parentId].children} />)
+                                    .map((parentId, index) => <OkrSegment key={parentId} count={index + 1} title={state.okrData[parentId].title} nestChildren={state.okrData[parentId].children} />)
                             }
                         </section>
                     </> : <NoData />

@@ -81,12 +81,13 @@ select:focus-visible {
 /* OKR Segment */
 
 .ally-okr__segment-item {
+  font-weight: 500;
   list-style: lower-alpha;
   padding-left: 86px;
   padding-bottom: 30px;
   position: relative;
   list-style-position: inside;
-  background: linear-gradient(#aeaeae, #aeaeae) 0px 14px/35px 2px no-repeat;
+  background: linear-gradient(#cccaca, #cccaca) 0px 14px/35px 2px no-repeat;
 }
 
 .ally-okr__segment>ul {
@@ -108,6 +109,7 @@ select:focus-visible {
   content: "";
   position: absolute;
   left: 50px;
+  opacity: 0.4;
 }
 
 .ally-okr__segment-title::before {
@@ -121,11 +123,12 @@ select:focus-visible {
   position: absolute;
   left: -10px;
   top: 3px;
+  opacity: 0.4;
 }
 
 .ally-okr__segment {
   padding-left: 0;
-  background: linear-gradient(#aeaeae, #aeaeae) no-repeat;
+  background: linear-gradient(#cccaca, #cccaca) no-repeat;
   background-position-y: 50px;
   background-position-x: 0px;
   background-size: 2px calc(100% - 102px);
