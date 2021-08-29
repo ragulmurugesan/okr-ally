@@ -52,7 +52,7 @@ export default function Container() {
 
     return (
         <>
-            <img className="ally-logo" src={AppLogo} alt="Ally logo" />
+            {/* <img className="ally-logo" src={AppLogo} alt="Ally logo" /> */}
             <div className="okr-cateogry">
                 <label className="okr-cateogry__label">Category</label>
                 <select value={category} onChange={handleCategoryChange}>
